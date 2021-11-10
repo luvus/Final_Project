@@ -1,0 +1,15 @@
+{% extends 'user_home.html' %}
+
+{% block content %}
+<h2>Register</h2>
+<div class="mb-3">
+<form method="post">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value="Register" class="form-control">
+    <button type="submit" value="Register" class="btn btn-outline-success">Submit</button>
+</form>
+</div>
+<a href="{% url 'login' %}">Back to login</a>
+
+{% endblock %}
