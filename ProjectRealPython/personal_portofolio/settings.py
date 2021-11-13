@@ -134,6 +134,8 @@ STATICFILES_DIRS = [
     #'/var/www/static/',
 ]
 
+STATIC STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static-files")
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
