@@ -41,8 +41,7 @@ INSTALLED_APPS = [
     'projects',
     'blog',
     'users',
-    'social_django',
-    
+
 ]
 
 MIDDLEWARE = [
@@ -68,8 +67,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'social_django.context_processors.backends',
-                'social_django.context_processors.login_redirect',
+
 
             ],
         },
@@ -144,11 +142,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = "dashboard"
 
 LOGOUT_REDIRECT_URL = "dashboard"
-
-AUTHENTICATION_BACKENDS = [
-    "django.contrib.auth.backends.ModelBackend",
-    "social_core.backends.github.GithubOAuth2",
-]
-
-SOCIAL_AUTH_GITHUB_KEY = os.environ.get('93a49dda429646c02394')
-SOCIAL_AUTH_GITHUB_SECRET = os.environ.get('9d9808da6cbaecdc187f941426ea9907e199248f')
