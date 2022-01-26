@@ -4,12 +4,14 @@
 <center>
 <h2>Login</h2>
 
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Login">
-</form>
-
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="input-group mb-3">
+            <input type="submit" value="Login">
+            </div>
+    </form>
+        
 <a href="{% url 'dashboard' %}">Back to dashboard</a>
 <p>Don't have an account? </p><a href="{% url 'register' %}">Register</a>
 
